@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .container{
+            width:50vw;
+            height:80vh;
+            display:flex;
+            flex-direction:column;
+            margin:20px auto;
+            text-align:center;
+            justify-content:space-evenly;
+            color:rgb(112, 41, 41);
+            
+        }
+        input[type="text"]{
+            width:75%;
+            padding:10px;
+            border:none;
+            outline:none;
+            margin-right:20px;
+        }
+            input[type="text"]{
+                margin-top:20px;
+                box-shadow:rgb(128, 128, 128) 2px 2px 5px;
+                border-radius:3px;
+            }
+            table {
+                width: 100%;
+                margin-top:20px;
+            }
+            input[type="button"]{
+                padding:10px 15px;
+                width:70px;
+                border:none;
+                border-radius:10px;
+                font-weight:bold;
+                background-color:rgb(128, 128, 128);
+                color:white;
+                  
+            }
+            .table{
+                flex-grow:1;
+                overflow:hidden auto;
+            }
+        input[type="button"]:focus{
+            outline:none;
+            background-color:rgb(52, 124, 212);
+            color:white;
+        }
+        thead{
+            background-color:rgb(204, 10, 10);
+            color:white;
+            
+        }
+        tr:nth-child(even){
+            background-color:rgb(220, 213, 213)
+        }
+       img{
+           width:1rem;
+           height:1rem;
+           
+       }
+    </style>
+        <link rel="shortcut icon" href="#" />
+        <script src="try4.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>To Do Organizer With Local Storage</h1>
+        <!-- <p>* After you refresh the page all task will restored from localStorage</p>
+        <p>* After refreshing the page you can delete one or more tasks</p>
+        <p>* if not works add ToDoList.js file after replaceing it's extention from txt to js</p> -->
+        <div class="userinputs">
+            <input type="text" placeholder="Enter Task Name" id="userinput" />
+            <input type="button" value="Add" id="btn" onclick="addTodo(`${document.getElementById('userinput').value}`)"/>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Done</th>
+                        <th>Task</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+      
+</body>
+</html>
